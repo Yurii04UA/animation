@@ -43,6 +43,7 @@
   animation-timing-function: linear;
   animation-delay: 0;
   animation-fill-mode: forwards;
+  /* animation-iteration-count: infinite; */
 }
 
 
@@ -60,7 +61,16 @@
   right: -25%;
   top: 35%;
   transform: scale(0.1);
-  /* opacity: 0; */
+  opacity: 0;
+}
+.rightAnimate {
+  animation-name: App-anim;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  /* animation-iteration-count: infinite; */
+
 }
 
 @keyframes App-anim {
