@@ -1,0 +1,90 @@
+.top {
+    width: 100px;
+    height: 30px;
+    background-color: aliceblue;
+    text-align: center;
+  }
+  .bottom {
+    width: 100px;
+    height: 30px;
+    background-color: aliceblue;
+    text-align: center;
+  }
+  
+  .leftWrapper2 {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    height: 80vh;
+    background-color: red;
+    position: absolute;
+    right: -25%;
+    top: 35%;
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  .leftAnimate2 {
+    animation-name: App-anim-old;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0;
+    animation-fill-mode: forwards;
+  }
+  
+  .rightWrapper2 {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    height: 80vh;
+    background-color: green;
+    position: absolute;
+    right: -25%;
+    top: 35%;
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  .rightAnimate2 {
+    animation-name: App-anim-old;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes App-anim-old {
+      0% {
+        transform: scale(0.1) rotateZ(-180deg);
+        right: -35%;
+        top: 40%;
+        opacity: 0;
+      }
+      15% {
+        transform: scale(1) translate(50%, -50%) rotateZ(0deg);
+        opacity: 1;
+        right: 50%;
+        top: 50%;
+      }
+      85% {
+        transform: scale(1) translate(50%, -50%) rotateZ(0deg);
+        opacity: 1;
+        right: 50%;
+        top: 50%;
+      }
+    
+      100% {
+        transform: scale(0) rotateZ(180deg);
+        opacity: 0;
+        right: 75%;
+        top: 40%;
+      }
+    }
+    
+  

@@ -1,13 +1,4 @@
-/* .leftWrapper {
-    max-width: 1400px;
-    height: auto;
-    width: 100%;
-}
 
-.leftWrapper img {
-    max-width: 100%;
-    height: auto;
-} */
 .top {
   width: 100px;
   height: 30px;
@@ -31,15 +22,15 @@
   width: 90%;
   height: 80vh;
   background-color: red;
-  /* position: absolute;
+  position: absolute;
   right: -25%;
   top: 35%;
   transform: scale(0.1);
-  opacity: 0; */
+  opacity: 0;
 }
 .leftAnimate {
   animation-name: App-anim1;
-  animation-duration: 5s;
+  animation-duration: 7s;
   animation-timing-function: linear;
   animation-delay: 0;
   animation-fill-mode: forwards;
@@ -47,66 +38,104 @@
 }
 
 .rightWrapper {
+  color: #fff;
   padding: 25px;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   max-width: 1200px;
   width: 90%;
   height: 80vh;
-  background-color: green;
-  /* position: absolute;
-  right: -25%;
-  top: 35%;
+  position: absolute;
+  left: 17%;
+  top: 6%;
   transform: scale(0.1);
-  opacity: 0; */
+  opacity: 0;
+  background-image: url('../../assets/wifi-waves-svgrepo-com.svg');
+  background-position: center;
+  background-size: 35%;
+  background-repeat: no-repeat;
+}
+
+.content{
+  margin-left: -150px;
+  font-size: 28px;
 }
 .rightAnimate {
   animation-name: App-anim2;
-  animation-duration: 5s;
+  animation-duration: 7s;
   animation-timing-function: linear;
   animation-delay: 0;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
 
+.author{
+  margin-bottom: 100px;
+}
+.author div{
+  opacity: 0.2;
+}
 @keyframes App-anim1 {
   0% {
-    transform: rotateZ(0deg);
+    transform: scale(0.1) rotateZ(-180deg);
+    right: -35%;
+    top: 40%;
+    opacity: 0.2;
   }
-  8% {
-    transform: rotateZ(45deg);
+  10% {
+    transform: scale(1) translate(50%, -50%) rotateZ(0deg);
+    opacity: 1;
+    right: 50%;
+    top: 50%;
   }
   42% {
-    transform: rotateZ(90deg);
+    transform: scale(1) translate(50%, -50%) rotateZ(0deg);
+    opacity: 1;
+    right: 50%;
+    top: 50%;
   }
 
   50% {
-    transform: rotateZ(0deg);
+    transform: scale(0) rotateZ(180deg);
+    opacity: 0;
+    right: 75%;
+    top: 40%;
   }
-  100%{
-    transform: rotateZ(0deg);
+  100% {
+    transform: scale(0) rotateZ(180deg);
+    opacity: 0;
+    right: 75%;
+    top: 40%;
   }
 }
 @keyframes App-anim2 {
   0% {
-    transform: rotateZ(-180deg);
-  }
-  50% {
-    transform: rotateZ(-180deg);
+    transform: scale(0.1);
 
+    opacity: 0;
   }
-  85% {
-    transform: rotateZ(0deg);
+  45% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  58% {
+    transform: scale(1);
+    opacity: 1;
   }
 
+  88% {
+    transform: scale(1);
+    opacity: 1;
+  }
   100% {
-    transform: rotateZ(180deg);
+    transform: scale(0.1);
+    opacity: 0;
   }
 }
-
-/* @keyframes App-anim2 {
+/* 
+@keyframes App-anim2 {
     0% {
       transform: scale(0.1) rotateZ(-180deg);
       right: -35%;

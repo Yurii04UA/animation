@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { AnimatedComponent } from "./components/AnimatedComponent/AnimatedComponent";
+import { DATA } from "./constants/DATA";
 import { mockData } from "./constants/mockData";
 
 export const App = () => {
@@ -10,29 +11,18 @@ export const App = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (count <= mockData.length) {
+      if (count <= mockData.length-2) {
         setCount((prev) => prev + 1);
         console.log(count, mockData.length);
+      } else {
+        setCount(0)
       }
-    }, 1000);
+    }, 7000);
     return () => clearInterval(interval);
   }, [count]);
-
+console.log(DATA)
   return (
     <div className="App">
-      {/* {mockData.map((elem) => {
-        let isPlayAnimate = false;
-        if (elem.id === count) isPlayAnimate = true;
-        return (
-          <AnimatedComponent
-            isAnimate={isPlayAnimate}
-            image={elem.img}
-            author={elem.author}
-            text={elem.text}
-            content={elem.content}
-          />
-        );
-      })} */}
 
       {count <= 5 ? (
         <AnimatedComponent
