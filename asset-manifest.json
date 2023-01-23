@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/animation/static/css/main.b517e3f6.css",
+    "main.js": "/animation/static/js/main.9497d94b.js",
+    "static/media/wifi-waves-svgrepo-com.svg": "/animation/static/media/wifi-waves-svgrepo-com.c695cdf6cb141028b3ea.svg",
+    "index.html": "/animation/index.html",
+    "main.b517e3f6.css.map": "/animation/static/css/main.b517e3f6.css.map",
+    "main.9497d94b.js.map": "/animation/static/js/main.9497d94b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b517e3f6.css",
+    "static/js/main.9497d94b.js"
+  ]
+}
