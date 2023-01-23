@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { AnimatedComponent } from "./components/AnimatedComponent/AnimatedComponent";
-import { DATA } from "./constants/DATA";
+import { DATA, USERS } from "./constants/DATA";
 import { mockData } from "./constants/mockData";
 
 export const App = () => {
@@ -13,23 +13,22 @@ export const App = () => {
     const interval = setInterval(() => {
       if (count <= mockData.length-2) {
         setCount((prev) => prev + 1);
-        console.log(count, mockData.length);
       } else {
         setCount(0)
       }
     }, 7000);
     return () => clearInterval(interval);
   }, [count]);
-console.log(DATA)
+console.log(USERS)
   return (
     <div className="App">
 
       {count <= 5 ? (
         <AnimatedComponent
-          image={mockData[count].img}
-          author={mockData[count].author}
-          text={mockData[count].text}
-          content={mockData[count].content}
+          image={USERS[count].url}
+          name={USERS[count].name}
+          text={USERS[count].text}
+          userName={USERS[count].username}
         />
       ) : null}
     </div>

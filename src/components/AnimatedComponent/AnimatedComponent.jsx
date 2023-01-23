@@ -3,27 +3,26 @@ import "./styles.css";
 
 export const AnimatedComponent = ({
   image,
-  author,
+  name,
   text,
-  content,
+  userName,
   isAnimate = true,
 }) => {
+  const formattedText = text?.replace(/https:\/\/[\n\S]+/g, '');
+
   return (
     <div className="wrapper">
-      <div className={isAnimate ? "leftWrapper leftAnimate" : "leftWrapper "}>
-        <div className="top">top</div>
-        <p>{image}</p>
-        <div className="bottom">bottom</div>
+      <div className={isAnimate ? "leftWrapper leftAnimation" : "leftWrapper "}>
+        <img src={image} alt={name} />
       </div>
-      <div className={isAnimate ? "rightWrapper rightAnimate" : "rightWrapper"}>
+      <div className={isAnimate ? "rightWrapper rightAnimation" : "rightWrapper"}>
         <div className="content">
           <div className="author">
-            <h2>{author}</h2>
-            <div>{content}</div>
+            <h2>{userName}</h2>
+            <div>by {name}</div>
           </div>
-          <h2>{text}</h2>
+          <h2>{formattedText}</h2>
         </div>
-        {/* <img className='leftImg' src={range3} alt="" /> */}
       </div>
     </div>
   );

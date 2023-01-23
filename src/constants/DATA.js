@@ -55,7 +55,7 @@ export const DATA = {
         retweet_count: 0,
         reply_count: 0,
         like_count: 0,
-        quote_count: 0,
+        quote_count: 0, 
         impression_count: 12,
       },
       id: "1616868741731467267",
@@ -245,7 +245,7 @@ export const DATA = {
       },
       {
         type: "photo",
-        url: "https://pbs.twimg.com/media/FnD4XfzXkAACqrx.jpg",
+        url: "https://klike.net/uploads/posts/2019-11/1572612050_1.jpg",
         media_key: "3_1617065348783640576",
         width: 1536,
         height: 2048,
@@ -577,9 +577,9 @@ const images = DATA.includes.media.filter((elem) => elem.url).splice(2).map(e =>
   url: e.url
 }));
 
-export const users = [];
+export const USERS = [];
 
 for (let i = 0; i <= 9; i++) {
   let newObj = Object.assign(textArr[i],user[i],images[i]);
-  users.push(newObj);
+  USERS.push(newObj);
 }

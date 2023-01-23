@@ -15,20 +15,24 @@
 .leftWrapper {
   padding: 25px;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   max-width: 1200px;
   width: 90%;
   height: 80vh;
-  background-color: red;
   position: absolute;
   right: -25%;
   top: 35%;
   transform: scale(0.1);
   opacity: 0;
 }
-.leftAnimate {
+
+.leftWrapper img{
+  max-width: 100%;
+  height: auto;
+  max-height:100%
+}
+.leftAnimation {
   animation-name: App-anim1;
   animation-duration: 7s;
   animation-timing-function: linear;
@@ -48,21 +52,24 @@
   width: 90%;
   height: 80vh;
   position: absolute;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
   left: 17%;
   top: 6%;
   transform: scale(0.1);
   opacity: 0;
   background-image: url('../../assets/wifi-waves-svgrepo-com.svg');
   background-position: center;
-  background-size: 35%;
+  background-size: 58%;
   background-repeat: no-repeat;
 }
 
 .content{
-  margin-left: -150px;
+  max-width: 600px;
   font-size: 28px;
 }
-.rightAnimate {
+.rightAnimation {
   animation-name: App-anim2;
   animation-duration: 7s;
   animation-timing-function: linear;
@@ -75,7 +82,7 @@
   margin-bottom: 100px;
 }
 .author div{
-  opacity: 0.2;
+  opacity: 0.3;
 }
 @keyframes App-anim1 {
   0% {
